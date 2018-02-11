@@ -1,0 +1,64 @@
+body {
+    background-color: #f5f5f5;
+}
+
+#main-content {
+    max-width: 940px;
+    padding: 2em 3em;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.table {
+     width: 100%;
+     table-layout: fixed;
+
+}
+
+.table tr td {
+    white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word;
+    width: auto;
+
+}
+
+#name{
+    float:left;
+}
+
+#username #password{
+    width: 25em;
+    max-width: 25em;
+}
+
+
+#username {
+    color: #131e33;
+}
+
+
+#greetings{
+    overflow-y:scroll;
+    height: 400px;
+    display: list-item;
+    width: 100%;
+    text-space: 100%;
+}
+
+
+.table-striped>tbody>tr {
+    display: list-item;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    display: list-item;
+}
+
+.table>tbody>tr>td {
+    display: list-item;
+}

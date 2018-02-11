@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "emojify.js": "^1.1.0",
+    "jsdom": "^9.12.0"
+  }
+}

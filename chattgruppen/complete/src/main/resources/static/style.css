@@ -1,0 +1,100 @@
+h1 {
+    color: white;
+    font-size: 100px;
+    font-family: 'Fascinate Inline',
+    cursive;
+}
+
+p {
+    color: #bec6d3;
+    font-size: 18px;
+    font-family: monospace;
+}
+
+#connecting {
+    font-size: 14px;
+    font-family: monospace;
+    float: inherit;
+}
+
+.loginP{
+    color: #bec6d3;
+    font-size: 18px;
+    font-family: monospace;
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: #131e33;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%
+}
+
+
+input {
+    background-color: white;
+    text-align: center;
+    border-radius: 18px;
+    width: 300px;
+    height: 30px;
+}
+
+#message {
+    background-color: white;
+    text-align: center;
+    border-radius: 8px;
+    width: 600px;
+    height: 40px;
+}
+
+input[type=submit], button {
+    padding:5px 15px;
+    background:#ccc;
+    cursor:pointer;
+    border-radius: 5px;
+    border-radius: 5px;
+    font-family: monospace;
+    margin-top: 15px;
+    width: auto;
+    height: auto;
+}
+
+#emoji-button{
+    padding:5px 15px;
+    background:#ccc;
+    cursor:pointer;
+    border-radius: 8px;
+    font-family: monospace;
+    margin-top: 0px;
+    width: 40px;
+    height: 40px;
+    margin-left: 4px;
+}
+
+#send {
+    padding:5px 15px;
+    background:#ccc;
+    cursor:pointer;
+    border-radius: 5px;
+    border-radius: 5px;
+    font-family: monospace;
+    margin-top: 7px;
+    margin-bottom: 25px;
+    width: 150px;
+    height: auto;
+}
+
+#chatheader2 {
+    color: #bec6d3;
+    font-size: 28px;
+    font-family: monospace;
+}
+
+#chatheader {
+    color: #131e33;
+    font-size: 28px;
+    font-family: 'Fascinate Inline',
+    cursive;
+}
