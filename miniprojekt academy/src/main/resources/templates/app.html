@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Java</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="/bootstrap.min.css"/>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body ng-app="gameApp">
+
+<div id="rubrik2">ACADEMY MIND MAP</div><br/>
+  <div class="container">
+      <!-- Trigger the modal with a button -->
+      <button type="button" id="myButton" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Java</button>
+      <button type="button" id="myButton" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Databaser</button>
+      <button type="button" id="myButton" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3">Javascript</button>
+      <button type="button" id="myButton" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal4">Github</button>
+      <button type="button" id="myButton" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal5">HTML CSS</button>
+      <button type="button" id="myButton" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal6">AngularJS</button>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal1" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Java</h4>
+            </div>
+            <div class="modal-body">
+              <main ng-controller="javaCtrl">
+                <div ng-hide="quizflag">
+                  <h3>Java</h3>
+                  Java är ett objektorienterat programspråk som utvecklats av Sun Microsystem och vars utveckling senare tagits över av Oracle. Java introducerades år 1995 och har flera intressanta egenskaper:
+                  <li>Java är plattformsoberoende. Med plattform menas ett visst operativsystem som kör på en viss typ av dator. Att Java är plattformsoberonde betyder alltså att ett Javaprogram kan köras på olika typer av datorsystem, utan att programmet behöver ändras.</li>
+                  <li>Java innehåller verktyg för att skapa grafisk användargränssnitt. Man kan alltså med hjälp av Java skriva grafiska program, dvs sådana program som använder fönster, menyer, knappat etc. Det fina med Javas verktyg för att skapa grafik är att de , liksom själva Javaspråket är plattformsoberoende.</li>
+                  <li>Java gör det möjligt att skriva parallella program. Detta betyder att ett Javaprogram kan utföra flera saker samtidigt. Det kan t.ex visa en rörlig bild samtidigt som det låter en användare mata in data till programmet</li>
+                  <li>Java kan användas på internet. Detta sker genom att man låter webbsidor innehålla s.k. apllets, små Javaprogram. Med hjälp av applets kan man t.ex. skapa grafik på webbsidor. I mer avancerade tillämpningar kan Java också användas för att skriva s.k servlets. Det är program som man lägger i en webbserver och som styr vad som händer när en användare begär att få tillträde till en webbsida.</li>
+                  <h3>Spring boot</h3>
+                  Spring Boot är ett ramverk baserat på Java/Spring och ett antal tredjeparts-ramverk som gör att du snabbt kan komma igång med minsta möjliga startsträcka.
+                  Tidigare versioner av ramverket Spring var känt för alla sina XML-konfigurationer, men applikationer utvecklade med Spring Boot kräver extremt lite konfiguration eftersom mycket av funktionaliteten automatkonfigureras. När du behöver konfigurera din applikation så gör du det enkelt med externa konfigurationsfiler
+                  <h3>JUnit</h3>
+                  JUnit är ett ramverk för enhetstestning av programmeringsspråket Java. JUnit var en viktig del i utvecklingen av utvecklingsmetoden testdriven utveckling och är en del av en grupp enhetstestande ramverk, känd som xUnit, som skapades i samma veva som SUnit.
+                  JUnit länkas som en JAR-fil vid kompilering; ramverket finns i paketet junit.framework för JUnit 3.8 och tidigare, och i paketet org.junit för JUnit 4 och senare.
+                  När man implementerat en klass måste man, innan den kan användas, testa att den uppfyller sin specifikation. Denna typ av testning brukar kallas enhetstestning. Vid s.k. black-box testning ser man en klass som en svart låda d.v.s. man vet ingenting om hur metoderna är implementerade.
+                  Det som testas är att metoderna ger det förväntade resultatet enligt sin specifikation.
+                </div>
+                <div id="maindiv" ng-show="flagan">
+                  <h2>{{hej}}</h2>
+                  <h3>{{page.fraga}}</h3>
+                  <div ng-repeat="o in page.options" >
+                    <label>
+                      <input ng-click="select($index+1)" type ="radio" name="e" ng-value="o"/><span>{{o}}</span>
+                    </label>
+                  </div>
+                  <div ng-hide="flag">
+                    <input class="myButton" type="submit" value="Fortsätt" ng-click="NextQuestion()"/><br/>
+                  </div>
+                </div>
+
+                <button type="button" lass="btn btn-default" ng-hide="quizflag" ng-click="doQuiz()">Do the Quiz</button>
+              </main>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Databaser</h4>
+            </div>
+            <div class="modal-body">
+              <main ng-controller="databaseCtrl">
+                <div ng-hide="quizflag">
+                  <h3>Databaser</h3>
+                  Data är uppgifter av olika slag. Ibland skiljer man data från information, som är data som man gett en tolkning. Alltså är 23 ett exempel på data, medan det är information om vi vet att det är 23 grader varmt ute. Ibland talar man också om kunskap, som i "kunskapsbaserade system". Kunskap är anvisningar om beteende, exempelvis regler för hur datorn ska dra slutsatser.
+                  Med ordet databas brukar man mena en samling data som hör ihop och som modellerar en del av världen, till exempel ett företag och dess verksamhet. En databas är persient och det betyder att den inte försvinner när man avslutar programmet eller stänger av datorn.
+                  SQL är ett vanligt frågespråk som används mycket i databassammanhang och är det helt dominerande frågespråket idag. Om du någon gång ska arbeta med en databashanterare på ett mer avancerat sätt än att bara fylla i formulär, är chansen därför stor att att du kommer att använda SQL.
+                </div>
+                <div id="maindiv" ng-show="flagan">
+                  <h2>{{hej}}</h2>
+                  <h3>{{page.fraga}}</h3>
+                  <div ng-repeat="o in page.options" >
+                    <label>
+                      <input ng-click="select($index+1)" type ="radio" name="e" ng-value="o"/><span>{{o}}</span>
+                    </label>
+                  </div>
+                  <div ng-hide="flag">
+                    <input class="myButton" type="submit" value="Fortsätt" ng-click="NextQuestion()"/><br/>
+                  </div>
+                </div>
+
+                <button type="button" lass="btn btn-default" ng-hide="quizflag" ng-click="doQuiz()">Do the Quiz</button>
+              </main>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal3" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">JavaScript</h4>
+          </div>
+          <div class="modal-body">
+            <main ng-controller="javascriptCtrl">
+              <div ng-hide="quizflag">
+                <h3>JavaScript</h3>
+                JavaScript är ett scriptspråk som är dynamsikt och som har likheter med programmeringsspråket Java. Man skriver det direkt i HTML-koden och behöver inte kompilera någon applet.
+                Då Javascript används i webbläsare arbetar det mot ett gränssnitt som kallas Document Object Model (DOM). Exempel på användningsområden är kontroll av ifyllda fält innan formulär skickas till en server, funktioner för att visa eller dölja delar av en sida och växling av annonsbilder med visst intervall. Javascript kan även användas för mer avancerade funktioner i en webbläsare såsom spel och bildbehandling. Skriptspråket kan implementeras i andra program än webbläsare. Ett numera vanligt exempel av implementation utanför webbläsaren är Node.js, som tillåter utvecklaren att använda javascript på serversidan för att kunna arbeta med anslutningar till databaser, skicka e-post-meddelanden och så vidare. JavaScript ger dig många möjligheter att förbättra din HTML-sida med en del intressanta saker. Du kan t ex enkelt svara på användar-initierade händelser . En del av de saker som nu är möjliga att göra med JavaScript var tidigare bara möjliga att göra med CGI. Du kan alltså göra verkligt sofistikerade sidor med hjälp av JavaScript.
+                Exempel på typiska JavaScript:
+                <li>Popup-rutor med varnings- eller välkomsttext</li>
+                <li>Kontroll av formulärdata</li>
+                <li>Öppna nya fönster för bilder med mera</li>
+                <li>Specialeffekter vid olika mushändelser (t ex muspekare över bild eller länk)</li>
+                <li>Datum och klocka</li>
+                <li>Sätta en viss storlek på webbläsarens fönster</li>
+
+                <h3>JQuery</h3>
+                jQuery är världens mest populära JavaScript-bibliotek. Det är designat bl.a. för att göra det enklare att anropa och modifiera element på hemsidan (divar, bilder, länkar etc), hantera händelser (t.ex. musklick), CSS-modifikationer samt skapa effekter och animationer. jQuery stödjer också plugin, och det finns många smidiga plugin som är gratis att ladda ner och använda.
+              </div>
+              <div id="maindiv" ng-show="flagan">
+                <h2>{{hej}}</h2>
+                <h3>{{page.fraga}}</h3>
+                <div ng-repeat="o in page.options" >
+                  <label>
+                    <input ng-click="select($index+1)" type ="radio" name="e" ng-value="o"/><span>{{o}}</span>
+                  </label>
+                </div>
+                <div ng-hide="flag">
+                  <input class="myButton" type="submit" value="Fortsätt" ng-click="NextQuestion()"/><br/>
+                </div>
+              </div>
+
+              <button type="button" lass="btn btn-default" ng-hide="quizflag" ng-click="doQuiz()">Do the Quiz</button>
+            </main>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal4" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Github</h4>
+          </div>
+          <div class="modal-body">
+            <main ng-controller="githubCtrl">
+              <div ng-hide="quizflag">
+                <h3>Github</h3>
+                Git är ett versionhanteringssytem som är utarbetat främst för mjukvaruutvecklare och hantering av kod, speciellt i större projekt med flera utvecklare som jobbar mot samma kodbas. Med ett versionshanteringssystem menas att systemet hjälper användarna att hantera filer och spara dem i olika versioner så att man kan spåra förändringar och t.ex. gå tillbaka i historiken. Det ger också möjligheter för flera utvecklare att dela och kunna samarbeta kring gemensamma filer utan att riskera att man skriver över någon annans arbete.<br/>
+                Du kommer under din utbildning att använda dig mycket av Git men även stöta på andra versionhanteringssytem så som t.ex. Subversion (svn).
+
+                GitHub är en tjänst som ger oss utvecklare möjlighet att, via webben, skapa, hantera och lagra projekt och dess data via Git. GitHub ger oss också möjlighet att dela kod med andra, studera andras kod och använda andras kod för att bygga vidare på. GitHub är alltså en tjänst för "social coding". Man kan också använda GitHub för att dela utvecklingsfiler i privata grupper eller som ensam utvecklare hantera sina filer på ett smidigt sätt. Vi skulle kunna kalla det ett slags Facebook, fast för kod. På senare tid har dock allt fler upptäckt möjligheterna med Git och GitHub och nu för tiden hittar man inte bara mjukvaruprojekt på GitHub utan även författare, lärare och en mängd andra branscher.
+              </div>
+              <div id="maindiv" ng-show="flagan">
+                <h2>{{hej}}</h2>
+                <h3>{{page.fraga}}</h3>
+                <div ng-repeat="o in page.options" >
+                  <label>
+                    <input ng-click="select($index+1)" type ="radio" name="e" ng-value="o"/><span>{{o}}</span>
+                  </label>
+                </div>
+                <div ng-hide="flag">
+                  <input class="myButton" type="submit" value="Fortsätt" ng-click="NextQuestion()"/><br/>
+                </div>
+              </div>
+
+              <button type="button" lass="btn btn-default" ng-hide="quizflag" ng-click="doQuiz()">Do the Quiz</button>
+            </main>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal5" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">HTML CSS</h4>
+          </div>
+          <div class="modal-body">
+            <main ng-controller="htmlcssCtrl">
+              <div ng-hide="quizflag">
+                <h3>HTML</h3>
+                HTML är det markeringsspråk som hela webben bygger på och utgör tillsammans med TCP/IP och HTTP den grundläggande standarden för WWW (World Wide Web, webben)Webbsidor skrivs i allmänhet som HTML och överförs över Internet med HTTP. Förkortningen HTML står för HyperText Markup Language.
+                HTML används tillsammans med CSS för att kunna styra hur det ska se ut. Man använder både HTML och CSS för att skapa hemsidor på inernet och ofta även med programmering och databaser.
+
+                <h3>CSS</h3>
+                CSS, som står för Cascading Style Sheets, är stilmallar som tillåter både den som skapar dokument och den som läser dem att använda sin egen stilmall. I praktiken har CSS använts till att formge dokument när det gäller färg, teckensnitt, justering av text och objekt mm. En CSS-mall kan styra tusentals dokument och det är då enkelt att ändra en layout genom att ändra formateringen i CSS-mallen. CSS har tagit HTML ett steg längre och möjliggjort formateringar och effekter som inte tidigare fanns i HTML standarden.
+                En av fördelarna med CSS är att flera mallar kan användas och de har då företräde inbördes så att en "huvudmall" med de övergripande formateringarna kan ersättas på en lägre nivå av en "lokal mall" som då gäller före huvudmallen. CSS är ett steg mot att separera innehåll och struktur i dokument. All formatering bör ske i externa mallar vilket gör att mängden kod i själva dokumentet minskar avsevärt och gör att sidorna laddas snabbare i webbläsaren. Då samma mall används för varje dokument behöver inte webbläsaren läsa in formateringsanvisningar på nytt varje gång en ny sida anropas.
+              </div>
+              <div id="maindiv" ng-show="flagan">
+                <h2>{{hej}}</h2>
+                <h3>{{page.fraga}}</h3>
+                <div ng-repeat="o in page.options" >
+                  <label>
+                    <input ng-click="select($index+1)" type ="radio" name="e" ng-value="o"/><span>{{o}}</span>
+                  </label>
+                </div>
+                <div ng-hide="flag">
+                  <input class="myButton" type="submit" value="Fortsätt" ng-click="NextQuestion()"/><br/>
+                </div>
+              </div>
+
+              <button type="button" lass="btn btn-default" ng-hide="quizflag" ng-click="doQuiz()">Do the Quiz</button>
+            </main>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal6" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">AngularJS</h4>
+          </div>
+          <div class="modal-body">
+            <main ng-controller="angularjsCtrl">
+              <div ng-hide="quizflag">
+                <h3>AngularJS</h3>
+                AngularJS är i sin tur, förenklat uttryckt, ett JavaScript-bibliotek, d.v.s. en uppsättning verktyg för att bygga den ram som passar just din applikations­utveckling bäst. Med hjälp av AngularJS kan du utöka HTML:s ordförråd för din applikation och skapa flexibla och dynamiska webbsidor – en miljö som är uttrycks­full, givande för användaren och går snabbt att utveckla. Resultatet är dessutom fullt utbyggbart och möjligt att anpassa efterhand och fungerar bra ihop med många andra bibliotek. Varje funktion kan modifieras eller bytas ut för att passa utvecklarens unika behov av funktioner eller arbetsflöde.
+              </div>
+              <div id="maindiv" ng-show="flagan">
+                <h2>{{hej}}</h2>
+                <h3>{{page.fraga}}</h3>
+                <div ng-repeat="o in page.options" >
+                  <label>
+                    <input ng-click="select($index+1)" type ="radio" name="e" ng-value="o"/><span>{{o}}</span>
+                  </label>
+                </div>
+                <div ng-hide="flag">
+                  <input class="myButton" type="submit" value="Fortsätt" ng-click="NextQuestion()"/><br/>
+                </div>
+              </div>
+
+              <button type="button" lass="btn btn-default" ng-hide="quizflag" ng-click="doQuiz()">Do the Quiz</button>
+            </main>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+<script src="/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/data.js"></script>
+<script src="/code.js"></script>
+</body>
+</html>
