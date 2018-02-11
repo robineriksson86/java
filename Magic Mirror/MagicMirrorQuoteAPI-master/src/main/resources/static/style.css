@@ -1,0 +1,411 @@
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+a:active {
+    color: grey;
+    text-decoration: none;
+}
+
+h1 {
+    color: white;
+    font-size: 105px;
+    font-family: 'Questrial', sans-serif, cursive;
+}
+
+#hP2 {
+    color: white;
+    font-size: 80px;
+    font-family: 'Questrial',  sans-serif, cursive;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+p {
+  color: white;
+  font-size: 18px;
+  font-family: Arial sans-serif;
+}
+
+
+
+td {
+  color: white;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  }
+
+.loginP {
+  color: #bec6d3;
+  font-size: 18px;
+  font-family: Arial sans-serif;
+  margin-bottom: 10px;
+}
+
+body {
+    background-color: black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    color: white;
+
+}
+
+.b2 {
+    background-color: black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%
+}
+
+input {
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 8px;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px auto;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background: #cccccc; 
+    font: normal normal bold 14px arial;
+    color: #111111;
+    text-decoration: none;
+    width: 304px;
+    height: 34px;
+}
+
+.listQuotes {
+	display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px auto;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background: #cccccc;
+    font: normal normal bold 18px arial;
+    color: #111111;
+    text-decoration: none;
+    width: 612px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.routebacklog:hover,
+.routebacklog:focus,
+#routeButton:hover,
+#routeButton:focus,
+.button:hover,
+.button:focus {
+    opacity: 0.5;
+    color: #111111;
+    text-decoration: none;
+}
+
+.routebacklog:active,
+#routeButton:active,
+.button:active {
+    background: #999999;
+}
+
+.addButton {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px auto;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background: #cccccc; 
+    font: normal normal bold 18px arial;
+    color: #111111;
+    text-decoration: none;
+    width: 410px;
+    height: 30px;
+}
+.routebacklog {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px auto;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background: #cccccc; 
+    font: normal normal bold 14px arial;
+    color: #111111;
+    text-decoration: none;
+    width: 147px;
+    height: 30px;
+}
+
+#routeButton {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px auto;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background: #cccccc; 
+    font: normal normal bold 18px arial;
+    color: #111111;
+    text-decoration: none;
+    width: 304x;
+    height: 30px;
+}
+
+.addButton:hover,
+.addButton:focus{
+    opacity: 0.5;
+    color: #111111;
+    text-decoration: none;
+}
+
+.addButton:active{
+    background: #999999;
+}
+
+.validationError {
+    color: #cc0000;
+}
+
+.portfolio-grid {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+}
+
+.portfolio-grid li {
+	display: inline-block;
+	margin: 5px 5px 5px 5px;
+	vertical-align: top;
+    width:212px;
+}
+
+#dash {
+    margin-bottom: 30px;
+}
+
+.portfolio-grid li > a,
+.portfolio-grid li > a img {
+    width: 100%;
+	border: none;
+	border-radius: 30px;
+	outline: none;
+	display: block;
+	position: relative;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.portfolio-grid li > a img:hover {
+    border-radius: 50%;
+    z-index: 9999;
+}
+
+.animated {
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    -o-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    -moz-animation-fill-mode:both;
+    -o-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+
+@-webkit-keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    40% {
+        -webkit-transform: perspective(400px) rotateX(-10deg);
+    }
+    70% {
+        -webkit-transform: perspective(400px) rotateX(10deg);
+    }
+    100% {
+        -webkit-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes flipInX {
+    0% {
+        -moz-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+
+    40% {
+        -moz-transform: perspective(400px) rotateX(-10deg);
+    }
+    70% {
+        -moz-transform: perspective(400px) rotateX(10deg);
+    }
+    100% {
+        -moz-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+@-o-keyframes flipInX {
+    0% {
+        -o-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    40% {
+        -o-transform: perspective(400px) rotateX(-10deg);
+    }
+    70% {
+        -o-transform: perspective(400px) rotateX(10deg);
+    }
+    100% {
+        -o-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes flipInX {
+    0% {
+        transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    40% {
+        transform: perspective(400px) rotateX(-10deg);
+    }
+    70% {
+        transform: perspective(400px) rotateX(10deg);
+    }
+    100% {
+        transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+.flipInX {
+	-webkit-backface-visibility: visible !important;
+	-webkit-animation-name: flipInX;
+	-moz-backface-visibility: visible !important;
+	-moz-animation-name: flipInX;
+	-o-backface-visibility: visible !important;
+	-o-animation-name: flipInX;
+	backface-visibility: visible !important;
+	animation-name: flipInX;
+}
+
+#addNewQuote {
+    line-height: 50px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+select {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px auto;
+    border-radius: 5px;
+    background: #cccccc;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #000000;
+    text-shadow: #ffffff 1px 1px 1px;
+    font: normal normal bold 13px arial;
+    color: #111111;
+    margin-bottom: 20px;
+    width: 180px;
+    padding: 4px;
+}
+
+option {
+    cursor: pointer;
+    background: #ffffff;
+    font: normal normal bold 13px arial;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px auto;
+}
+
+#quotes {
+    height: 50px;
+    width: 405px;
+    background-image: url(http://www.quotemaster.org/images/30/306f24f974fcc4f84621cce9a796787d.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: 365px;
+    background-position-y: 6px;
+}
+
+.backlog{
+	width: 133px;
+}
+
+table {
+  display: block;
+  height: 320px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  text-align:left;
+  background-color:#1f1f21; 
+  padding: 10px;
+  padding-left: 40px;
+}
+
+th {
+  font-size: 25px;
+  font-family: sans-serif;
+}
+
+#home {
+height: 36px;
+width: 300px;
+background-image: url(http://www.pngall.com/wp-content/uploads/2016/04/Home-PNG-Image.png);
+background-repeat: no-repeat;
+background-size: 25px;
+background-position-x: 270px;
+background-position-y: 8px;
+}
+
+#work {
+height: 36px;
+width: 300px;
+background-image: url(http://www.publicdomainpictures.net/pictures/50000/velka/computer-silhouette.jpg);
+background-repeat: no-repeat;
+background-size: 25px;
+background-position-x: 270px;
+background-position-y: 8px;
+
+}
+.trashcan{
+	width: 15px;
+    padding-left: 15px;
+	
+}
+
+.theme{
+    padding-left: 15px;
+}

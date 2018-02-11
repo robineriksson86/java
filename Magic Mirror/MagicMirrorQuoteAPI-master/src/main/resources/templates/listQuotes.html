@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>MagicWidgets</title>
+    <link rel="stylesheet" type="text/css" th:href="@{style.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet"/>
+</head>
+<body class = "b2">
+    <h1 id="hP2">Magic Quotes</h1>
+    <table>
+        <tr>
+            <th>Quote</th>
+            <th class="theme">Theme</th>
+        </tr>
+        <tr th:each="quote : ${quotes}">
+            <td th:text="${quote.quote}"></td>
+            <td class="theme" th:text="${quote.quoteType}"></td>
+            <td><a th:href="@{/deleteQuote/{id}(id=${quote.id})}"><img class="trashcan" src="/images/trash.png" alt="trashcan"/></a></td>
+        </tr>
+    </table>
+    <a href="/newQuote" id="addNewQuote">
+        <input class="listQuotes button" type="button" value="Add new quote"/>
+    </a>
+    <a href="/dashboard">
+        <input class="button" type="button" value="Go back"/>
+    </a>
+    <a href="/logout">
+        <input class="button" type="button" value="Logout"/>
+    </a>
+</body>
+</html>

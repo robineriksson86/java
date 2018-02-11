@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>MagicWidgets</title>
+    <link  rel="stylesheet" type="text/css" th:href="@{style.css}"/>             
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet"/>
+</head>
+<body class = 'b2'>
+  <h1 id = 'hP2'>Magic Countdown</h1>
+  <form id="quoteType" action="#">
+      <input type="text" placeholder="Countdown to?"/>
+      <div>
+          <input type="datetime-local" placeholder="Countdown date"/>
+        </div>
+      <div>
+        <input id = "routeButton" type="submit" value="Begin countdown"/>
+      </div>
+  </form>
+  <br/>
+    <a href="/dashboard">
+        <input class="button routebacklog" type="button" value="Go back"/>
+    </a>
+    <a href="/logout">
+        <input class="button routebacklog" type="button" value="Logout"/>
+    </a>
+</body>
+</html>

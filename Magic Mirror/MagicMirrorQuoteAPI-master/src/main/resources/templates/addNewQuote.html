@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>MagicWidgets</title>
+    <link  rel="stylesheet" type="text/css" th:href="@{style.css}"/>       
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet"/>
+</head>
+<body class = 'b2'>
+  <h1 id = 'hP2'>Magic Quotes</h1>
+
+  <form id="quoteType" action="#" th:action="@{/newQuote}" method="post" th:object="${quote}" >
+  <div class="dropbtn">
+      <select name="quoteTypeList" th:field="*{quoteType}" class="dropbtn">
+        <option value="Other" hidden="hidden" >Select category</option>
+        <option value="Movies" >Movies </option>
+        <option value="Inspirational" >Inspirational</option>
+        <option value="Academy" >Academy</option>
+      </select>
+    </div>
+      <input id="quotes" type="text" placeholder="New quote"  th:field="*{quote}"/>
+      <div>
+        <input class="addButton" type="submit" value="Add quote"/>
+      </div>
+      <p class="validationError" th:each="err : ${#fields.errors('quote')}" th:text="${err}"></p>
+  </form>
+  <br/>
+    <a href="/quotes">
+      <input class="backlog button" type="button" value="List quotes"/>
+    </a>
+    <a href="/dashboard">
+        <input class="backlog button" type="button" value="Go back"/>
+    </a>
+    <a href="/logout">
+        <input class="backlog button" type="button" value="Logout"/>
+    </a>
+</body>
+</html>
